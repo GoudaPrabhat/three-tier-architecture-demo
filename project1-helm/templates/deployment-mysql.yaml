@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: deploy-mysql
+    projectName: {{ .Values.labels.projectName }}
+  name: deploy-mysql
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: deploy-mysql
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: deploy-mysql
+    spec:
+      containers:
+      - image: {{ .Values.image.repo }}/mysql:{{ .Values.image.version}}
+        name: mysql
+        ports:
+        - containerPort: 3306
+        resources: {}
+status: {}
