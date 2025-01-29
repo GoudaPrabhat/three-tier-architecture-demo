@@ -3,3 +3,44 @@
 *-private.*
 vendor/
 Gopkg.lock
+
+# Terraform State Files
+terraform.tfstate
+terraform.tfstate.backup
+*.tfstate
+*.tfstate.*
+
+# Terraform Configuration Override Files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Terraform Plan Files
+*.tfplan
+
+# Crash Log Files
+crash.log
+*.crash
+
+# .terraform Directory (Terraform Modules & Plugins)
+.terraform/
+.terraform.lock.hcl
+
+# Variables and Secrets (Avoid Hardcoding Credentials)
+*.auto.tfvars
+*.tfvars
+terraform.tfvars
+terraform.tfvars.json
+
+# Sensitive Credentials (AWS Credentials & SSH Keys)
+*.pem
+*.key
+*.crt
+*.env
+
+# IDE/Editor Files
+.vscode/
+.idea/
+.DS_Store
+*.swp

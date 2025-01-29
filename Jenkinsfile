@@ -40,7 +40,7 @@ pipeline {
                     dockerImageCatalogue.push("latest")
                 }
 
-                docker.withRegistry('https://339712782795.dkr.ecr.us-east-2.amazonaws.com/disptach', 'ecr:us-east-2:aws-credentials') {
+                docker.withRegistry('https://339712782795.dkr.ecr.us-east-2.amazonaws.com/dispatch', 'ecr:us-east-2:aws-credentials') {
                     dockerImageDispatch.push("${env.BUILD_NUMBER}")
                     dockerImageDispatch.push("latest")
                 }
