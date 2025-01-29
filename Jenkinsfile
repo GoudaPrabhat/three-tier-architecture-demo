@@ -11,16 +11,16 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    dockerImageWeb = docker.build("project1-web:${env.BUILD_NUMBER}", "./web")
-                    dockerImageCart = docker.build("project1-cart:${env.BUILD_NUMBER}", "./cart")
-                    dockerImageCatalogue = docker.build("project1-catalogue:${env.BUILD_NUMBER}", "./catalogue")
-                    dockerImageDispatch = docker.build("project1-dispatch:${env.BUILD_NUMBER}", "./dispatch")
-                    dockerImageMongo = docker.build("project1-mongo:${env.BUILD_NUMBER}", "./mongo")
-                    dockerImageMysql = docker.build("project1-mysql:${env.BUILD_NUMBER}", "./mysql")
-                    dockerImagePayment = docker.build("project1-payment:${env.BUILD_NUMBER}", "./payment")
-                    dockerImageRatings = docker.build("project1-ratings:${env.BUILD_NUMBER}", "./ratings")
-                    dockerImageShipping = docker.build("project1-shipping:${env.BUILD_NUMBER}", "./shipping")
-                    dockerImageUser = docker.build("project1-user:${env.BUILD_NUMBER}", "./user")
+                    dockerImageWeb = docker.build("web:${env.BUILD_NUMBER}", "./web")
+                    dockerImageCart = docker.build("cart:${env.BUILD_NUMBER}", "./cart")
+                    dockerImageCatalogue = docker.build("catalogue:${env.BUILD_NUMBER}", "./catalogue")
+                    dockerImageDispatch = docker.build("dispatch:${env.BUILD_NUMBER}", "./dispatch")
+                    dockerImageMongo = docker.build("mongo:${env.BUILD_NUMBER}", "./mongo")
+                    dockerImageMysql = docker.build("mysql:${env.BUILD_NUMBER}", "./mysql")
+                    dockerImagePayment = docker.build("payment:${env.BUILD_NUMBER}", "./payment")
+                    dockerImageRatings = docker.build("ratings:${env.BUILD_NUMBER}", "./ratings")
+                    dockerImageShipping = docker.build("shipping:${env.BUILD_NUMBER}", "./shipping")
+                    dockerImageUser = docker.build("user:${env.BUILD_NUMBER}", "./user")
                 }
             } 
         }
