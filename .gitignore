@@ -44,3 +44,4 @@ terraform.tfvars.json
 .idea/
 .DS_Store
 *.swp
+.terraform/
